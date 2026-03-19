@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user
-            rm -rf myapp
+            sudo rm -rf myapp
             git clone https://github.com/RajatBisht-dev/myapp.git
             cd myapp
             sudo docker build --no-cache -t myapp .
